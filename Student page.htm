@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Education Platform</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+    
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+    
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+    
+        header nav ul li {
+            margin: 0 1rem;
+        }
+    
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            display: block;
+            transition: background-color 0.3s ease;
+        }
+    
+        header nav ul li a:hover {
+            background-color: #555;
+            border-radius: 4px;
+        }
+    
+        main {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    
+        section {
+            margin-bottom: 2rem;
+        }
+    
+        section h2 {
+            margin-top: 0;
+            color: #444;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 0.5rem;
+        }
+    
+        .course-list,
+        .resource-list,
+        .tutorial-list,
+        .university-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+    
+        .course-list div,
+        .resource-list div,
+        .tutorial-list div,
+        .university-list div {
+            background-color: #fff;
+            padding: 1rem;
+            margin: 0.5rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex: 1 1 calc(33.333% - 1rem);
+            box-sizing: border-box;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+    
+        .course-list div:hover,
+        .resource-list div:hover,
+        .tutorial-list div:hover,
+        .university-list div:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+    
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+    
+        form button {
+            background-color: #333;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+    
+        form button:hover {
+            background-color: #555;
+        }
+    
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    
+        footer a {
+            color: #fff;
+            text-decoration: underline;
+        }
+    
+        @media (max-width: 768px) {
+            .course-list div,
+            .resource-list div,
+            .tutorial-list div,
+            .university-list div {
+                flex: 1 1 100%;
+            }
+    
+            header nav ul {
+                flex-direction: column;
+            }
+    
+            header nav ul li {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Online Education Platform</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Resources</a></li>
+                <li><a href="#">Tutorials</a></li>
+                <li><a href="#">Universities</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="courses-section">
+            <h2>Courses</h2>
+            <div class="course-list">
+                <div>Introduction to Python</div>
+                <div>Web Development Fundamentals</div>
+                <div>Data Science with R</div>
+                <div>Digital Marketing Strategies</div>
+                <div>Graphic Design Essentials</div>
+                <div>Advanced Calculus</div>
+            </div>
+        </section>
+        <section class="resources-section">
+            <h2>Resources</h2>
+            <div class="resource-list">
+                <div><a href="https://www.khanacademy.org/">Khan Academy</a></div>
+                <div><a href="https://www.coursera.org/">Coursera</a></div>
+                <div><a href="https://www.edx.org/">edX</a></div>
+                <div><a href="https://www.w3schools.com/">W3Schools</a></div>
+                <div><a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a></div>
+                <div><a href="https://projecteuler.net/">Project Euler</a></div>
+            </div>
+        </section>
+        <section class="tutorials-section">
+            <h2>Tutorials</h2>
+            <div class="tutorial-list">
+                <div>HTML Basics Tutorial</div>
+                <div>CSS Styling Guide</div>
+                <div>JavaScript for Beginners</div>
+                <div>React.js Quick Start</div>
+                <div>SQL Database Tutorial</div>
+                <div>Python Data Analysis Tutorial</div>
+            </div>
+        </section>
+        <section class="universities-section">
+            <h2>Universities</h2>
+            <div class="university-list">
+                <div>Massachusetts Institute of Technology (MIT)</div>
+                <div>Stanford University</div>
+                <div>Harvard University</div>
+                <div>University of Oxford</div>
+                <div>California Institute of Technology (Caltech)</div>
+                <div>University of Cambridge</div>
+            </div>
+        </section>
+        <section class="contact-section" id="contact">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or need further assistance, feel free to reach out to us:</p>
+            <form>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required><br><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required><br><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="5" placeholder="Write your message here" required></textarea><br><br>
+                <button type="submit" style="background-color: #333; color: #fff; padding: 0.5rem 1rem; border: none; border-radius: 4px; cursor: pointer;">Submit</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Online Education Platform. All rights reserved.</p>
+        <p>Empowering students to achieve their academic goals.</p>
+        <p>
+            <a href="#contact">Contact Us</a> |
+            <a href="https://facebook.com" target="_Agboola zoe boluwatife">Facebook</a> |
+            <a href="https://twitter.com" target="_software67975">Twitter</a> |
+            <a href="https://linkedin.com" target="_Zoe Technology">LinkedIn</a>
+        </p>
+        <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" style="background-color: #555; color: #fff; padding: 0.5rem 1rem; border: none; border-radius: 4px; cursor: pointer; margin-top: 1rem;">Back to Top</button>
+    </footer>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Smooth scrolling for navigation links
+        const navLinks = document.querySelectorAll('header nav ul li a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                if (link.getAttribute('href').startsWith('#')) {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Form validation
+        const contactForm = document.querySelector('form');
+        contactForm.addEventListener('submit', (e) => {
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (!name || !email || !message) {
+                e.preventDefault();
+                alert('Please fill out all fields before submitting.');
+            }
+        });
+    });
+</script>
+</html>
+
